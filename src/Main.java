@@ -54,13 +54,15 @@ public class Main {
 
     public static void task4 () {
         System.out.println("Задача 4");
-        int contribution = 15_000;
+        float contribution = 15_000f;
         int percent = 7;
         int month = 0;
         while (contribution<12_000_000) {
             month++;
             contribution+=contribution*percent/100;
-            System.out.println("месяц "+month+", сумма "+contribution);
+            System.out.printf("месяц "+month+" сумма %.2f",contribution);
+            System.out.println();
+
 
         }
 
@@ -68,14 +70,15 @@ public class Main {
 
     public static void task5 () {
         System.out.println("Задача 5");
-        int contribution = 15_000;
+        float contribution = 15_000f;
         int percent = 7;
         int month = 0;
         while (contribution<12_000_000) {
             month++;
             contribution+=contribution*percent/100;
             if (month % 6 == 0) {
-                System.out.println("месяц " + month + ", сумма " + contribution);
+                System.out.printf("месяц " + month + ", сумма %.2f",contribution);
+                System.out.println();
             }
 
         }
@@ -84,13 +87,14 @@ public class Main {
 
     public static void task6 () {
         System.out.println("Задача 6");
-        int contribution = 15000;
+        float contribution = 15000f;
         int percent = 7;
         int month = 1;
         for (; month<=108; month++) {
             contribution+=contribution*percent/100;
             if (month % 6 == 0) {
-                System.out.println("месяц"+month+", сумма накоплений "+contribution);
+                System.out.printf("месяц "+month+", сумма накоплений %.2f",contribution);
+                System.out.println();
             }
 
         }
